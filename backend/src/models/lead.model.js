@@ -15,14 +15,17 @@ const leadSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
+      match: [
+        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+        "Please provide a valid email address.",
+      ],
       unique: true,
-      lowercase: true,
-      trim: true,
     },
     phone: {
       type: String,
       required: true,
       trim: true,
+      maxLength: [15, "Phone number cannot be longer than 15 characters"],
     },
     company: {
       type: String,
