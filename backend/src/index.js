@@ -1,12 +1,17 @@
 import express from "express";
-import { PORT } from "./config/serverConfig.js";
+import { FRONTEND_URL, PORT } from "./config/serverConfig.js";
 import { connectDB } from "./config/dbConfig.js";
 import cors from "cors";
 import leadRoutes from "./routes/lead.route.js";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: FRONTEND_URL,
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
