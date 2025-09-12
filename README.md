@@ -2,6 +2,14 @@
 
 A full-stack web application for managing sales leads with a modern React frontend and Express.js backend.
 
+# Screenshots:
+
+![](<./frontend/public/Lead-management-home%20(2).png>)
+
+![](<./frontend/public/Lead-management-create%20(2).png>)
+
+![](<./frontend/public/Lead-management-dashboard%20(2).png>)
+
 ## Tech Stack
 
 ### Frontend
